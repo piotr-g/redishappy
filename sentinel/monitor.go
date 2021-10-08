@@ -105,6 +105,7 @@ L:
 				}
 
 				for _, connectedsentinel := range sentinels {
+					logger.Info.Printf("Adding sentinel : %s", connectedsentinel.GetLocation())
 					m.manager.Notify(&SentinelAdded{Sentinel: connectedsentinel})
 				}
 			}
